@@ -1,0 +1,107 @@
+﻿<Window x:Class="Wpf_14.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_14"
+        mc:Ignorable="d"
+        Title="Module_14" Height="600" Width="800" Background="LightBlue" 
+        MaxHeight="1000" MaxWidth="1000" Closing="Window_Closing">
+
+
+    <Grid x:Name="mainGrid">
+        <GroupBox Header="Данные клиентов" HorizontalAlignment="Left" Height="400"
+                  Width="300" FontSize="17">
+            <ListBox x:Name="list">
+            </ListBox>
+        </GroupBox>
+
+        <ListBox x:Name="addList" Height="400" Width="200" HorizontalAlignment="Right" 
+                 Margin="0,10,31.6,10">
+
+            <TextBlock Width="200" Height="46" HorizontalAlignment="Stretch"
+                        Text="Введите имя клиента:" FontSize="18"/>
+            <TextBox x:Name="addName" Width="200" Height="35" ToolTip="Введите имя клиента"
+                     FontSize="18"/>
+
+            <TextBlock Width="200" Height="46" HorizontalAlignment="Stretch"
+                        Text="Сумма на деп. счете:" FontSize="18"/>
+            <TextBox x:Name="addDeposite" Width="200" Height="35" 
+                     ToolTip="Какая сумма будет на депозитном счете"
+                     FontSize="18"/>
+
+            <TextBlock Width="200" Height="46" HorizontalAlignment="Stretch"
+                        Text="Сумма на кред.счете:" FontSize="18"/>
+            <TextBox x:Name="addCredit" Width="200" Height="35" 
+                     ToolTip="Какая сумма будет на кредитном счете"
+                     FontSize="18"/>
+            <Button x:Name="addClient" Content="Добавить" FontSize="17" Background="AliceBlue" 
+                HorizontalAlignment="Left" IsDefault="True"
+                VerticalAlignment="Top" Width="130" Height="35" Click="addClient_Click"/>
+        </ListBox>
+
+        <TextBox x:Name="transferAmount" HorizontalAlignment="Left" Height="34"
+                 Margin="358,464,0,0" TextWrapping="Wrap" FontSize="18"
+                 ToolTip="Введите сумму"
+                 Text="" VerticalAlignment="Top" Width="140"/>
+
+        <!--#region Перевод средств-->
+
+        <TextBox x:Name="reciepient" HorizontalAlignment="Left" Height="41" Margin="358,377,0,0"
+                 TextWrapping="Wrap" FontSize="18" Text="" ToolTip="Введите имя клиента"
+                 VerticalAlignment="Top" Width="144"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="358,271,0,0"
+                   TextWrapping="Wrap" Text="Перевод денег от:"
+                   VerticalAlignment="Top" FontSize="18"
+                   Height="37" Width="153"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="358,341,0,0"
+            TextWrapping="Wrap" Text="Кому:"
+            VerticalAlignment="Top" FontSize="18"
+            Height="36" Width="85"/>
+
+        <TextBox x:Name="send" FontSize="18" HorizontalAlignment="Left"
+                 Height="33" Margin="358,303,0,0"
+                 TextWrapping="Wrap" Text="" ToolTip="Введите имя клиента"
+                 VerticalAlignment="Top" Width="144"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="358,423,0,0"
+            TextWrapping="Wrap" Text="Сумма:"
+            VerticalAlignment="Top" FontSize="18"
+            Height="36" Width="85"/>
+
+        <Button x:Name="transferButton" Content="Перевести"
+                HorizontalAlignment="Left" Margin="358,503,0,0"
+                VerticalAlignment="Top" FontSize="18"
+                Width="129" Height="36" RenderTransformOrigin="0.633,0.55"
+                Click="transferButton_Click"/>
+        <!--#endregion-->
+
+        <!--#region Закрытие счета-->
+
+        <TextBlock HorizontalAlignment="Left" Margin="358,36,0,0"
+            TextWrapping="Wrap" Text="Закрыть счет клиента: "
+            VerticalAlignment="Top" FontSize="18"
+            Height="52" Width="153"/>
+
+
+        <TextBox x:Name="closeClient" FontSize="18" HorizontalAlignment="Left"
+                 Height="34" Margin="358,93,0,0"
+                 TextWrapping="Wrap" Text="" ToolTip="Введите имя клиента"
+                 VerticalAlignment="Top" Width="131"/>
+
+        <Button x:Name="closeButton" Content="Закрыть счет"
+            HorizontalAlignment="Left" Margin="358,132,0,0"
+            VerticalAlignment="Top" FontSize="18"
+            Width="129" Height="36" RenderTransformOrigin="0.633,0.55"
+            Click="closeButton_Click"/>
+
+        <!--#endregion-->
+
+    </Grid>
+
+
+
+
+</Window>
