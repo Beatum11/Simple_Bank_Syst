@@ -35,22 +35,6 @@ namespace Module_13
             WakeUp();
 
             cf.Transfer(clients[0], clients[1]);
-            //cf.OpenAccount();
-            //cf.CloseAccount(clients);
-            //cf.Show_ClientsInfo(clients);
-
-            //while (i.flag)
-            //{
-            //    i.Interact();
-            //    i.Actions(clients);
-            //}
-
-
-
-
-
-
-
 
             Console.ReadKey();
         }
